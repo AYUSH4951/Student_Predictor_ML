@@ -1,21 +1,24 @@
 from flask import Flask, request,jsonify
+from flask_cors import CORS
 import numpy as np
 import pandas as pd
 
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 
-application=Flask(__name__)
-app=application
+
+
+app = Flask(__name__)
+CORS(app)
 
 # Route for a home page
 
-@app.route('/check')
+@app.route('/')
 def home():
     return "Student Performance Prediction API is running successfully"
 
 
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict_datapoint():
     try:
         data = request.get_json()
@@ -46,4 +49,4 @@ def predict_datapoint():
         })
     
 if __name__=="__main__":
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", port=10000)
