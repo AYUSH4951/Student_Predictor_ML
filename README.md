@@ -124,7 +124,6 @@ python app.py
 ## Frontend Setup
 
 ```bash
-cd frontend
 npm install
 npm run dev
 ```
@@ -167,7 +166,7 @@ POST /predict
 - Backend: Deployed on Render  
 
 For the frontend source code, visit:  
-https://github.com/AYUSH4951/student-predictor-frontend
+https://github.com/AYUSH4951/Frontend_Student_Predictor_ML.git
 
 ---
 
