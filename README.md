@@ -56,3 +56,121 @@ The **Student Performance Predictor** is a Machine Learning-based web applicatio
 ---
 
 ## Project Structure
+
+Student_Predictor_ML/
+|
+├── artifacts/
+│   ├── data.csv
+│   ├── model.pkl
+│   ├── preprocessor.pkl
+|   ├── test.csv
+│   └── train.csv
+│
+├── notebook/
+│   ├── catboost_info/
+|   ├── data/
+│   │   └── StudentsPerformance.csv
+│   ├── eda_student_performance.ipynb
+|   └── model_training.ipynb
+|
+├── src/
+│   ├── components/
+│   │   ├── __init__.py
+│   │   ├── data_ingestion.py
+│   │   ├── data_transformation.py
+│   │   └── model_trainer.py
+│   
+│   ├── pipeline/
+│   │   ├── __init__.py
+│   │   ├── predict_pipeline.py
+│   │   └── train_pipeline.py
+│   ├── __init__.py
+│   ├── exception.py
+|   ├── logger.py
+│   └── utils.py
+│   
+├── templates/
+|   └── home.html
+│   
+├── .gitignore
+├── README.md
+├── app.py
+├── requirements.txt
+├── runtime.txt
+└── setup.py
+
+
+---
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AYUSH4951/Student_Predictor_ML.git
+cd Student_Predictor_ML
+```
+## Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate   # Windows
+
+pip install -r requirements.txt
+python app.py
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## API Endpoint
+
+POST /predict
+
+---
+
+## Sample Input
+
+```json
+{
+  "gender": "female",
+  "race_ethnicity": "group B",
+  "parental_level_of_education": "bachelor's degree",
+  "lunch": "standard",
+  "test_preparation_course": "completed",
+  "reading_score": 72,
+  "writing_score": 74
+}
+```
+
+---
+
+## Response
+
+```json
+{
+  "prediction": 75.34
+}
+```
+
+## Deployment
+
+- Frontend: Deployed on Vercel  
+- Backend: Deployed on Render  
+
+For the frontend source code, visit:  
+https://github.com/AYUSH4951/student-predictor-frontend
+
+---
+
+Contributions, suggestions, and improvements are always welcome.
