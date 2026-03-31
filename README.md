@@ -141,13 +141,13 @@ POST /predict
 
 ```json
 {
-  "gender": "female",
-  "race_ethnicity": "group B",
-  "parental_level_of_education": "bachelor's degree",
-  "lunch": "standard",
-  "test_preparation_course": "completed",
-  "reading_score": 72,
-  "writing_score": 74
+  "gender": "string",
+  "race_ethnicity": "string",
+  "parental_level_of_education": "string",
+  "lunch": "string",
+  "test_preparation_course": "string",
+  "reading_score": number,
+  "writing_score": number
 }
 ```
 
@@ -157,7 +157,7 @@ POST /predict
 
 ```json
 {
-  "prediction": 75.34
+  "prediction": number
 }
 ```
 
