@@ -49,55 +49,53 @@ The **Student Performance Predictor** is a Machine Learning-based web applicatio
 - Pandas  
 - NumPy  
 
-### Deployment
-- Vercel (Frontend)  
-- Render (Backend)  
-
 ---
-
 ## Project Structure
 
+```
 Student_Predictor_ML/
-|
+│
 ├── artifacts/
 │   ├── data.csv
 │   ├── model.pkl
 │   ├── preprocessor.pkl
-|   ├── test.csv
+│   ├── test.csv
 │   └── train.csv
 │
 ├── notebook/
 │   ├── catboost_info/
-|   ├── data/
+│   ├── data/
 │   │   └── StudentsPerformance.csv
 │   ├── eda_student_performance.ipynb
-|   └── model_training.ipynb
-|
+│   └── model_training.ipynb
+│
 ├── src/
 │   ├── components/
 │   │   ├── __init__.py
 │   │   ├── data_ingestion.py
 │   │   ├── data_transformation.py
 │   │   └── model_trainer.py
-│   
+│   │
 │   ├── pipeline/
 │   │   ├── __init__.py
 │   │   ├── predict_pipeline.py
 │   │   └── train_pipeline.py
+│   │
 │   ├── __init__.py
 │   ├── exception.py
-|   ├── logger.py
+│   ├── logger.py
 │   └── utils.py
-│   
+│
 ├── templates/
-|   └── home.html
-│   
+│   └── home.html
+│
 ├── .gitignore
 ├── README.md
 ├── app.py
 ├── requirements.txt
 ├── runtime.txt
 └── setup.py
+```
 
 
 ---
@@ -173,4 +171,4 @@ https://github.com/AYUSH4951/student-predictor-frontend
 
 ---
 
-Contributions, suggestions, and improvements are always welcome.
+## Contributions, suggestions, and improvements are always welcome.
